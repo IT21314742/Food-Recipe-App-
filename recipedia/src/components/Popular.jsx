@@ -3,7 +3,8 @@ import React from 'react'
 const Popular = () => {
 
     const getPopular = async () => {
-        const api = await fetch(`https://api.spoonacular.com/recipes/random`)
+        const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}$number=10`)
+        
     }
     return (
         <div>Popular</div>
