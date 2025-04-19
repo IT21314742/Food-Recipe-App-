@@ -3,7 +3,7 @@ import React from 'react'
 const Popular = () => {
 
     const getPopular = async () => {
-        
+        const api = await fetch(`https://api.spoonacular.com/recipes/random`)
     }
     return (
         <div>Popular</div>
