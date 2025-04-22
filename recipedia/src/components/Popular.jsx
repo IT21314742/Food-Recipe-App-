@@ -1,52 +1,27 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
 
 const Popular = () => {
 
-    useEffect(() =>{
+    useEffect(() => {
         getPopular();
-    },[]);
+    }, []);
 
     const getPopular = async () => {
-        const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}$number=10`)
-        const data = await api.json();
-        console.log(data);
+        try {
+            const response = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=10`);
+            const data = await response.json();
+            console.log(data);
+        } catch (error) {
+            console.error("API error:", error);
+        }
     };
 
     return (
-        <div>Popular</div>
-    )
-}
+        <div>
+            <h2>Popular Recipes</h2>
+            {/* You can map through and display data here later */}
+        </div>
+    );
+};
 
-export default Popular
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export default Popular;
