@@ -1,6 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Popular = () => {
+
+    const []
 
     useEffect(() => {
         getPopular();
