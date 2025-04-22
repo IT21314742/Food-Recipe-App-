@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const Popular = () => {
 
-    const [Popular, setPopular] =
+    const [Popular, setPopular] = useState([]);
 
     useEffect(() => {
         getPopular();
